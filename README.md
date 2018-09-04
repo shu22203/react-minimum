@@ -1,3 +1,11 @@
 # react-minimum
 
-This repository is the minimum react app using React.js + Redux + Typescript + Webpack + Atomic Design + Styped-compoments.
+This repository is the minimum React app using 
+- React
+- Redux
+- react-router
+- Typescript
+- Atomic Design
+- Styled-compoments
+- prettier
+- TSLint
