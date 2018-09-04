@@ -1,23 +1,23 @@
 import { Action } from "redux";
-import { DECREMENT, INCREMENT } from '../actionType/counter'
+import { ActionNames } from '../actionType/counter'
 
 export interface IIncrementAction extends Action {
-    type: string;
+    type: ActionNames.INCREMENT;
 }
 
 export interface IDecrementAction extends Action {
-    type: string;
+    type: ActionNames.DECREMENT;
 }
 
 export const increment = (): IIncrementAction => {
     return {
-        type: INCREMENT
+        type: ActionNames.INCREMENT
     }
 };
 
 export const decrement = (): IDecrementAction => {
     return {
-        type: DECREMENT
+        type: ActionNames.DECREMENT
     }
 };
 
