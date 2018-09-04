@@ -1,28 +1,21 @@
 import * as React from 'react';
+import logo from '../logo.svg';
+import './App.css';
 
-interface IProps {
-    count: number;
-    increment: any;
-    decrement: any;
-}
-
-export default class Home extends React.Component<IProps, {}> {
-    public increment: any;
-    public decrement: any;
-
-    constructor(props: any) {
-        super(props);
-        this.increment = this.props.increment.bind(this);
-        this.decrement = this.props.decrement.bind(this);
-    }
-
+class Home extends React.Component {
     public render() {
         return (
-            <div>
-                <h1>{this.props.count}</h1>
-                <button onClick={this.increment}>increment</button>
-                <button onClick={this.decrement}>decrement</button>
+            <div className="App">
+                <header className="App-header">
+                    <img src={logo} className="App-logo" alt="logo"/>
+                    <h1 className="App-title">Welcome to React App.</h1>
+                </header>
+                <p className="App-intro">
+                    To get started, edit <code>src/App.tsx</code> and save to reload.
+                </p>
             </div>
-        )
+        );
     }
 }
+
+export default Home;
