@@ -1,15 +1,14 @@
-import { Action, createStore } from 'redux';
-import { CounterActions } from "./actions/actionCreators/counter";
-import reducers from './reducer'
-import { ICounterState } from "./reducer/counter";
+import { createStore, combineReducers } from 'redux';
+import { userReducer, UserState } from "./reducer/userStates";
 
-export const store = createStore(
-    reducers
-);
-
-export interface IReduxState {
-    counter: ICounterState
+export interface AppState {
+    user: UserState
 }
 
-export type ReduxAction = CounterActions | Action
+const store = createStore(
+    combineReducers<AppState>({
+        user: userReducer
+    })
+)
 
+export default store
